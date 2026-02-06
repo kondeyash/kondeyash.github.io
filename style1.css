@@ -1,0 +1,113 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background: #f4f6f8;
+}
+
+.container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 30px;
+}
+
+
+.section {
+  background: #ffffff;
+  padding: 25px;
+  margin-bottom: 25px;
+  border-radius: 10px;
+  /* box-shadow: 0 4px 10px rgba(0,0,0,0.08); */
+}
+
+
+.section h2 {
+  text-align: center;
+  margin-bottom: 15px;
+  color: #2c3e50;
+  border-bottom: 2px solid #3498db;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+
+.section.intro {
+  text-align: left;
+}
+
+
+.about-text {
+  text-align: justify;
+  line-height: 1.8;
+  font-size: 16px;
+  color: #444;
+}
+
+
+.edu-card {
+  background: #f9fafb;
+  padding: 15px;
+  border-left: 5px solid #3498db;
+  margin-bottom: 15px;
+  border-radius: 6px;
+}
+
+.edu-card h4 {
+  color: #2c3e50;
+}
+
+
+.skills,
+.certification {
+  /* list-style: none; */
+  padding-left: 0;
+  text-align: center;
+}
+
+.skills li,
+.certification li {
+  background: #eaf2ff;
+  margin: 10px;
+  padding: 10px 15px;
+  border-radius: 20px;
+  display: inline-block;
+  font-size: 14px;
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  background: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  /* box-shadow: 0 4px 8px rgba(0,0,0,0.1); */
+  /* z-index: 1000; */
+}
+
+.nav-logo {
+  font-size: 22px;
+  font-weight: bold;
+  color: #3498db;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #2c3e50;
+  font-weight: 500;
+}
+
+.nav-links li a:hover {
+  color: #3498db;
+}
