@@ -172,3 +172,81 @@
             border: 4px solid blueviolet;
             box-shadow: 0 0 25px blueviolet;
         }
+/* ---------- Global Responsive Fix ---------- */
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+/* ---------- Navigation Layout ---------- */
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* ---------- Skills Layout ---------- */
+
+.skills{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.skill-box{
+    padding: 10px 15px;
+}
+
+/* ---------- Mobile Responsive Design ---------- */
+
+@media (max-width:768px){
+
+    /* Navigation */
+    nav{
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    nav ul{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding-top: 10px;
+    }
+
+    /* First Section (Home) */
+    .firstsection{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .leftsection{
+        width: 100%;
+        font-size: 20px;
+    }
+
+    .rightsection{
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .rightsection img{
+        width: 80%;
+    }
+
+    /* About / Skills / Certification / Contact */
+    .secondsection{
+        padding: 20px;
+        text-align: center;
+    }
+
+    h1{
+        font-size: 26px;
+    }
+
+}
