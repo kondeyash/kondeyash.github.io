@@ -1,0 +1,97 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: lightblue;   
+    color: #333;
+    line-height: 1.6;
+}
+
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 30px auto;
+}
+
+
+.section {
+    background-color: #ffffff;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.section h2 {
+    margin-bottom: 15px;
+    color: black;  
+    border-bottom: 2px solid black;
+    display: inline-block;
+}
+
+
+.intro {
+    text-align: center;
+}
+
+.profile-img {
+    margin: 15px 0;
+}
+
+.profile-img img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    border: 3px solid black;
+    object-fit: cover;
+}
+
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #333;
+    padding: 6px 12px;
+}
+
+.nav-links li a:hover {
+    color: black;
+}
+
+
+.edu-card {
+    background-color: #fff7ed;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+}
+
+
+.skills,
+.certification {
+    list-style: none;
+}
+
+.skills li,
+.certification li {
+    background-color: #fff7ed;
+    padding: 8px;
+    margin-bottom: 8px;
+    border-radius: 6px;
+}
