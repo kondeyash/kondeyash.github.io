@@ -36,10 +36,10 @@ function rollTheDice() {
             result.innerHTML = "Draw!"
         }
         else if (randomNumber1 < randomNumber2) {
-            result.innerHTML = (player2  + "WINS!");
+            result.innerHTML = (player2  + "" + "WINS!");
         }
         else {
-            result.innerHTML = (player1 + "WINS!");
+            result.innerHTML = (player1 + "" + "WINS!");
         }
 
     }, 2500);
