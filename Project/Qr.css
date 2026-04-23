@@ -1,0 +1,54 @@
+body {
+    border: 10px solid blueviolet;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: olivedrab;
+    padding: 20px; /* adds space from edges */
+}
+
+/* Main container */
+.container {
+    border: 10px solid blueviolet;
+    padding: 40px;
+    max-width: 700px;
+    height: auto;
+    margin: 20px auto;
+    text-align: center;
+}
+
+/* Input box */
+input {
+    width: 70%;
+    padding: 12px;
+    font-size: 14px;
+    margin-bottom: 10px; /* space between inputs */
+}
+
+/* Button */
+button {
+    padding: 15px 25px; /* reduced size */
+    background-color: blueviolet;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 20px; /* space below button */
+}
+
+/* QR Code box */
+#qrCode {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 15px; /* THIS creates gap from border */
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    background: white; /* helps QR stand out */
+}
+
+/* QR image */
+#qrCode img {
+    width: 100%;
+    height: auto;
+}
