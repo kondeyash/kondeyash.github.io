@@ -1,0 +1,340 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(
+        -45deg,
+        #0f172a,
+        #1e3a8a,
+        #059669,
+        #0ea5e9
+    );
+    background-size:400% 400%;
+    animation:bgMove 12s ease infinite;
+    overflow:hidden;
+}
+
+@keyframes bgMove{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+/* Floating circles */
+
+body::before,
+body::after{
+    content:"";
+    position:absolute;
+    border-radius:50%;
+    filter:blur(60px);
+    z-index:-1;
+}
+
+body::before{
+    width:300px;
+    height:300px;
+    background:#00ffae;
+    top:-100px;
+    left:-100px;
+}
+
+body::after{
+    width:250px;
+    height:250px;
+    background:#3b82f6;
+    bottom:-100px;
+    right:-100px;
+}
+
+.container{
+    width:90%;
+    max-width:750px;
+    padding:35px;
+    border-radius:30px;
+    backdrop-filter:blur(25px);
+    background:rgba(255,255,255,0.12);
+    border:1px solid rgba(255,255,255,0.2);
+    box-shadow:
+        0 10px 40px rgba(0,0,0,.3),
+        inset 0 1px 1px rgba(255,255,255,.2);
+    animation:cardShow .8s ease;
+}
+
+@keyframes cardShow{
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+h1{
+    text-align:center;
+    color:white;
+    font-size:42px;
+    font-weight:800;
+    margin-bottom:10px;
+}
+
+h3{
+    color:#e2e8f0;
+    margin-bottom:20px;
+}
+
+h2{
+    color:white;
+    margin:25px 0;
+    line-height:1.6;
+    font-size:26px;
+}
+
+button{
+    border:none;
+    cursor:pointer;
+    transition:.35s;
+}
+
+/* Difficulty buttons */
+
+#startScreen button{
+    width:220px;
+    padding:15px;
+    margin:12px;
+    border-radius:15px;
+    font-size:18px;
+    font-weight:600;
+    color:white;
+    background:linear-gradient(
+        135deg,
+        #06b6d4,
+        #2563eb
+    );
+}
+
+#startScreen button:hover{
+    transform:translateY(-5px) scale(1.03);
+    box-shadow:0 12px 25px rgba(37,99,235,.4);
+}
+
+/* Header */
+
+.header{
+    display:flex;
+    justify-content:space-between;
+    margin-bottom:25px;
+}
+
+.header div{
+    background:rgba(255,255,255,.15);
+    color:white;
+    padding:12px 20px;
+    border-radius:40px;
+    font-weight:700;
+    backdrop-filter:blur(10px);
+}
+
+/* Timer pulse */
+
+#timer{
+    color:#ffdd57;
+    animation:pulse 1s infinite;
+}
+
+@keyframes pulse{
+    0%{transform:scale(1);}
+    50%{transform:scale(1.15);}
+    100%{transform:scale(1);}
+}
+
+/* Progress */
+
+.progress{
+    color:white;
+    font-weight:600;
+    margin-bottom:15px;
+}
+
+.progress-bar{
+    width:100%;
+    height:12px;
+    border-radius:20px;
+    background:rgba(255,255,255,.15);
+    overflow:hidden;
+    margin-bottom:20px;
+}
+
+.progress-fill{
+    height:100%;
+    width:20%;
+    border-radius:20px;
+    background:linear-gradient(
+        90deg,
+        #00ffae,
+        #00c3ff
+    );
+    transition:.5s;
+}
+
+/* Options */
+
+.option{
+    width:100%;
+    margin:12px 0;
+    padding:18px;
+    border-radius:18px;
+    text-align:left;
+    font-size:17px;
+    font-weight:500;
+    color:white;
+    background:rgba(255,255,255,.12);
+    border:2px solid transparent;
+    backdrop-filter:blur(15px);
+}
+
+.option:hover{
+    transform:translateX(8px);
+    border-color:#60a5fa;
+    background:rgba(255,255,255,.18);
+}
+
+/* Correct Answer */
+
+.correct{
+    background:linear-gradient(
+        135deg,
+        #22c55e,
+        #16a34a
+    ) !important;
+    color:white !important;
+    animation:bounce .5s;
+}
+
+/* Wrong Answer */
+
+.wrong{
+    background:linear-gradient(
+        135deg,
+        #ef4444,
+        #dc2626
+    ) !important;
+    color:white !important;
+}
+
+@keyframes bounce{
+    0%{
+        transform:scale(.9);
+    }
+    50%{
+        transform:scale(1.08);
+    }
+    100%{
+        transform:scale(1);
+    }
+}
+
+.hidden{
+    display:none;
+}
+
+/* Result Screen */
+
+#resultScreen{
+    animation:zoomIn .7s ease;
+}
+
+@keyframes zoomIn{
+    from{
+        opacity:0;
+        transform:scale(.5);
+    }
+    to{
+        opacity:1;
+        transform:scale(1);
+    }
+}
+
+#finalScore{
+    font-size:40px;
+    color:#00ffae;
+    font-weight:800;
+    margin:25px 0;
+}
+
+#resultScreen button{
+    padding:15px 40px;
+    border-radius:15px;
+    background:linear-gradient(
+        135deg,
+        #f59e0b,
+        #f97316
+    );
+    color:white;
+    font-size:18px;
+    font-weight:700;
+}
+
+#resultScreen button:hover{
+    transform:translateY(-4px);
+    box-shadow:0 12px 25px rgba(249,115,22,.4);
+}
+
+/* Scroll animation */
+
+.option,
+.header,
+.progress,
+h2{
+    animation:fadeIn .6s ease;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(15px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+    .container{
+        width:95%;
+        padding:20px;
+    }
+
+    h1{
+        font-size:30px;
+    }
+
+    h2{
+        font-size:20px;
+    }
+
+    .header{
+        flex-direction:column;
+        gap:10px;
+    }
+
+    #startScreen button{
+        width:100%;
+    }
+}

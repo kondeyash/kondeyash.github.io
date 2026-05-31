@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cricket Quiz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <div id="startScreen">
+        <h1>🏏 Cricket Quiz Challenge</h1>
+
+        <h3>Select Difficulty</h3>
+
+        <button onclick="startQuiz('easy')">Easy</button>
+        <button onclick="startQuiz('medium')">Medium</button>
+        <button onclick="startQuiz('hard')">Hard</button>
+    </div>
+
+    <div id="quizScreen" class="hidden">
+
+        <div class="header">
+            <div>Score: <span id="score">0</span></div>
+            <div>Time: <span id="timer">15</span>s</div>
+        </div>
+
+        <div class="progress">
+            Question <span id="current">1</span>/5
+        </div>
+
+        <h2 id="question"></h2>
+
+        <div id="options"></div>
+
+    </div>
+
+    <div id="resultScreen" class="hidden">
+        <h1>Quiz Completed 🎉</h1>
+
+        <h2 id="finalScore"></h2>
+
+        <button onclick="location.reload()">
+            Play Again
+        </button>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
